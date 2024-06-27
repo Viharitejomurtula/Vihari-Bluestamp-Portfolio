@@ -1,5 +1,5 @@
 # Vihari's Gesture Controlled Car Portfolio
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+My project is a Gesture Controlled Car. This is essentially a remote control car, but instead of being controlled by a pair of joysticks, it is controlled with the movements of my hand. This is done with the use of something that many of us use everyday: bluetooth.
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -17,40 +17,36 @@ You should comment out all portions of your portfolio that you have not complete
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+**The next step was a modification. I wanted to put a robotic arm on top of the car and make that gesture controlled as well using a similar working to that of the car and controller.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
--For the first milestone I have synched up the two bluetooths
--This will later be used to make the controller communicate with the actual car
--One of the issues I faced was with the firmware, which I had to reset
--I also had to assign the role of the slave to the Arduino UNO by entering in the proper command
+-The first step towards this modification was to build the actual robotic arm itself. This was quite simple as I just followed a tutorial.
+-The next step was to change the controls of the robotic arm, from the joysticks to the accelerometer. So I had to pair another two bluetooths that would make the Arduino Micro and the Nano board communicate. This was an issue as this meant I had to connect two bluetooth devices to the Arduino Micro. Initially I didn't think this was possible as the bluetooth just wouldn't connect to the Serial Port which was used to send messages. I fixed this problem by configuring the bluetooth while connecting it to the Nano and then just transferring the wiring over
+-This was where I am at this point, but I hope to be able to alter the code uploaded into the arm to change the input of the if conditions from a joystick movement to an accelerometer reading
 
 
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+**After getting the controller working, I had to get the actual tires of the car rotating how I wanted them to.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+-The first thing I did was understand the workings of the h-bridge, and used two of them to control the right two and left two wheels. This was an issue as I needed the left two tires to move in synch with each other as well as the right two tires to move in synch with each other.
+-By extending the connections of the h-bridge to a breadboard, I was able to synch up the right two and left two wheels. 
+-I faced an issue after doing this, there wasn't enough power to rotate all the motors. I fixed this by plugging a 9V battery into the Arduino UNO
+-Finally, I connected an accelerometer to the Arduino Micro, which is the controller of the car. An accelerometer is able to sense the tilt in itself and manifest that tilt as a number in the x or y direction. Then I programmed the Micro to be able to send over the readings on the accelerometer to the car. This made it so that the car would move in accordance to the tilt of the controller.
 
 # First Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+**Getting the Bluetooths on the car and the controller to be synched was a challenging task for me who has never dealt with this kind of a project before. But eventually, I got it to work and completed the first step of this project.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+-The first step was to set up the wiring according to the wiring diagram. I kept messing this up because I kept confusing different wires and didn't understand how the breadboard worked, but eventually I got it wired properly.
+-The next step was to understand what the code was actually doing. This wasn't too difficult as I just looked up all the syntax in the Arduino language references
+-Finally, I had to configure the two bluetooths into a master and slave configuration. This took quite long as I kept messing up the AT commands which were involved with configuring the bluetooths, but I was successful after resetting the firmware and entering the commands again.
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
