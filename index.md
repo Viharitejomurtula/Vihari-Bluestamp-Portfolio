@@ -52,36 +52,190 @@ You should comment out all portions of your portfolio that you have not complete
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
-# Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+# Arduino Uno Code
+This is the code that I uploaded to my Arduino Uno, which was connected to the actual car.
 
 ```c++
+#include <SoftwareSerial.h>
+
+#define tx 2
+#define rx 3
+
+
+
+SoftwareSerial configBt(rx, tx);
+long tm,t,d;
+
+char c="";
+
+const int TWOA1A = 4;
+const int TWOA1B = 5;
+//left side;
+const int TWOB1A = 9;
+const int TWOB1B = 8;
+//right side;
+
+
+
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+  Serial.begin(38400);
+  configBt.begin(38400);
+  pinMode(tx, OUTPUT);
+  pinMode(rx, INPUT);
+
+  pinMode(TWOB1A,OUTPUT);
+  pinMode(TWOB1B,OUTPUT);
+
+  pinMode(TWOA1A,OUTPUT);
+  pinMode(TWOA1B,OUTPUT);
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  if(configBt.available()){
+    c=(char)configBt.read();
+    Serial.println(c);
+  }
 
+  switch(c){
+    case 'f':
+      forward();
+      break;
+
+    case 'b':
+      back();
+      break;
+
+    case 'r':
+      right();
+      break;
+
+    case 'l':
+      left();
+      break;
+
+    case 's':
+      stop();
+      break;
+  }
 }
-```
 
+
+void forward(){
+  digitalWrite(TWOA1A,LOW);
+  digitalWrite(TWOA1B,HIGH);
+  digitalWrite(TWOB1A,HIGH);
+  digitalWrite(TWOB1B,LOW);
+}
+
+void back(){
+  digitalWrite(TWOA1A,HIGH);
+  digitalWrite(TWOA1B,LOW);
+  digitalWrite(TWOB1A,LOW);
+  digitalWrite(TWOB1B,HIGH);
+}
+
+void right(){
+  digitalWrite(TWOA1A,HIGH);
+  digitalWrite(TWOA1B,LOW);
+  digitalWrite(TWOB1A,HIGH);
+  digitalWrite(TWOB1B,LOW);
+}
+
+void left(){
+  digitalWrite(TWOA1A,LOW);
+  digitalWrite(TWOA1B,HIGH);
+  digitalWrite(TWOB1A,LOW);
+  digitalWrite(TWOB1B,HIGH);
+}
+
+void stop(){
+  digitalWrite(TWOA1A,LOW);
+  digitalWrite(TWOA1B,LOW);
+  digitalWrite(TWOB1A,LOW);
+  digitalWrite(TWOB1B,LOW);
+}
+
+
+
+
+
+```
+# Arduino Micro Code
+This was my code for the Arduino Micro which was connected to the controller of the car.
+```c++
+#include <Wire.h>
+
+#define MPU6050_ADDRESS 0x68
+
+int16_t accelerometerX, accelerometerY, accelerometerZ;
+
+void setup()
+{
+  Wire.begin();
+  Serial1.begin(38400);
+
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x6B);
+  Wire.write(0);
+  Wire.endTransmission(true);
+  delay(100);
+}
+
+void loop()
+{
+  readData();
+  doMovement();
+  delay(500);
+}
+
+void readData()
+{
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x3B);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU6050_ADDRESS, 6, true); 
+
+  accelerometerX = Wire.read() << 8 | Wire.read();
+  accelerometerY = Wire.read() << 8 | Wire.read();
+  accelerometerZ = Wire.read() << 8 | Wire.read();
+}
+
+
+void doMovement()
+{
+  if (accelerometerY >= 6500) {
+    Serial1.write('f');
+  }
+  else if (accelerometerY <= -4000) {
+    Serial1.write('b');
+  }
+  else if (accelerometerX <= -3250) {
+    Serial1.write('l');
+  }
+  else if (accelerometerX >= 3250) {
+    Serial1.write('r');
+  }
+  else {
+    Serial1.write('s');
+  }
+}
+
+```
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
-| **Part** | **Note** | **Price** | **Link** |
+| **Part** | **Use** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Screwdriver Set | To tighten screw | $6.99 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6(https://www.amazon.com/Small-Screwdriver-Set-Mini-Magnetic/dp/B08RYXKJW9/)/"> Link </a> |
+| H-Bridge | To control the motors | $5.99 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/(https://www.amazon.com/Ferwooh-Stepper-Controller-2-5-12V-H-Bridge/dp/B0D17PJ2MS/ref=sr_1_1?crid=2OQ7UJ1VJLUHU&dib=eyJ2IjoiMSJ9.xPgxMG6cmxZRuRbSqT3QxSr9zBhiCzp3WpnCeGbZjJfW2wU1eHonQ9Yw7yZi2k6Q3PhHd4uR1wLLWBETfHe0SF_wYRGvOug585fW0fsZTX6ImNTMLCJR3VH7MrRlnR7uQ5g0XrAXnzyVOSTEAmuNKyuiUk_vhsIuCNv1HCMrPUyPtn7qKFCwz7vVMcvEXx5Ddy4TPQJlpbS_voU9at8F85yJM5O9Hp5bbg_xuIHUsuE2ePCbv4lATgHmgHzENtlSRiU4laurwSqTAEgEnv9gNIbmb5d2HT5qBLfNChqSyio.9Fh1mUFHx48E8QZCOAX5T2ZJxzbHHdu93PJ63MLUqpM&dib_tag=se&keywords=L9110S+DC&s=electronics&sprefix=l9110s+dc%2Celectronics%2C89&sr=1-1)"> Link </a> |
+| Arduino UNO | A microcontroller board used to control the car | $16.99 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/(https://www.amazon.com/ELEGOO-Board-ATmega328P-ATMEGA16U2-Compliant/dp/B01EWOE0UU/ref=sr_1_2_sspa?crid=3A6NCD2X9JEMJ&dib=eyJ2IjoiMSJ9.AcWZy-Yg4mDTnhzEHozxzPZdVC5-KUL2tW-OQewDKpBB4brSpD-p4bn74WcXiW3KarYertgpNaLJ0VHKx0qsPqolKAhiz1GRG5BwJQl73cEvrlXIXNmqlpSvU7uu2aRVSwAZi9Gj2AjSPLM3esW1Gzy9xEiQ9oiR5LCNjh4MlYDx5mTm5sI4rsD4CFTipJnF572qXlickl35FRcCj8oMXQotumgqI4yEIq0HobOtIlEnNhtVB51JMBHhqtmmF_PC9WeHJ4ySUVVcv_gq3_VeG1aAEbdm4NXmmT6NOYPw4Qo.1PFdgFT22oqO5Mg6-6j_aUL_EV8tUPuaFrB5N9oaEX0&dib_tag=se&keywords=elegoo+arduino&s=electronics&sprefix=elegoo+arduino%2Celectronics%2C99&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)"> Link </a> |
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+# Resources that I used
+These are some of the resources I used to help me build my car:
+- [Gesture Controlled Robotic Arm by Joel A.]([https://trashytuber.github.io/YimingJiaBlueStamp/](https://jabraham777.github.io/Gesture_Controlled_Robotic_Car/))
+- [Gesture Controlled Robot via Bluetooth]([https://sviatil0.github.io/Sviatoslav_BSE/](https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d))
+- [A document which helped me establish the Bluetooth connections]([https://arneshkumar.github.io/arneshbluestamp/](https://cdn.discordapp.com/attachments/1245042593717293137/1249801066216951919/Using_HC05_to_Communicate_to_HC05_1.docx?ex=66805a72&is=667f08f2&hm=fdc41341c4fdfdd7783f88b4ec2c15a814b22f760978444b4a3bb93779dd9a68&))
 
 To watch the BSE tutorial on how to create a portfolio, click here.
