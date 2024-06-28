@@ -19,7 +19,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 **The next step was a modification. I wanted to put a robotic arm on top of the car and make that gesture controlled as well using a similar working to that of the car and controller.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=4Xq_3TuRaPQ
 
 -The first step towards this modification was to build the actual robotic arm itself. This was quite simple as I just followed a tutorial.
 -The next step was to change the controls of the robotic arm, from the joysticks to the accelerometer. So I had to pair another two bluetooths that would make the Arduino Micro and the Nano board communicate. This was an issue as this meant I had to connect two bluetooth devices to the Arduino Micro. Initially I didn't think this was possible as the bluetooth just wouldn't connect to the Serial Port which was used to send messages. I fixed this problem by configuring the bluetooth while connecting it to the Nano and then just transferring the wiring over
@@ -31,7 +31,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 **After getting the controller working, I had to get the actual tires of the car rotating how I wanted them to.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=rMxV38q7EIY
 
 -The first thing I did was understand the workings of the h-bridge, and used two of them to control the right two and left two wheels. This was an issue as I needed the left two tires to move in synch with each other as well as the right two tires to move in synch with each other.
 -By extending the connections of the h-bridge to a breadboard, I was able to synch up the right two and left two wheels. 
@@ -42,7 +42,8 @@ You should comment out all portions of your portfolio that you have not complete
 
 **Getting the Bluetooths on the car and the controller to be synched was a challenging task for me who has never dealt with this kind of a project before. But eventually, I got it to work and completed the first step of this project.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=WXkEZ5nbTl8
+
 
 -The first step was to set up the wiring according to the wiring diagram. I kept messing this up because I kept confusing different wires and didn't understand how the breadboard worked, but eventually I got it wired properly.
 -The next step was to understand what the code was actually doing. This wasn't too difficult as I just looked up all the syntax in the Arduino language references
