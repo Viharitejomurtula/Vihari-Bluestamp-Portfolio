@@ -1,11 +1,7 @@
 # Vihari's Gesture Controlled Car Portfolio
 My project is a Gesture Controlled Car. This is essentially a remote control car, but instead of being controlled by a pair of joysticks, it is controlled with the movements of my hand. This is done with the use of something that many of us use everyday: bluetooth.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
+
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -238,7 +234,8 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Micro USB Cable | Used to upload the code to the Arduino Micro | $5.49 | <a href="https://www.amazon.com/Charging-Transfer-Android-Trustable-MYFON/dp/B098DW7485/ref=sr_1_6?crid=3USJU0DMSZB2S&keywords=micro%2Busb&s=electronics&sprefix=micro%2Busb%2Celectronics%2C106&sr=1-6&th=1"> Link </a>|
 | Accelerometer | This sensed the gestures of my hand and outputted it as data | $9.90 | <a href="https://www.amazon.com/Pre-Soldered-Accelerometer-Raspberry-Compatible-Arduino/dp/B0BMY15TC4/ref=sr_1_5?crid=8EDYBVQQY7E2&dib=eyJ2IjoiMSJ9.ID40hq0zMYWtG7Um61yZ63xnujgA2opJZN4n7Ear4a7PVz0kChoZQvMielgIQHXUTy4_yuQvwgK7S5aC7H8U6s5ChRMOd0Iba7IZDg_ySpKnO5uemH-09l_GS1vcaiACgMnHA4JltsdzdfsSBwKgUFAhFhLuvIKnY6G3lrVGfynAdqGHpq4kg53C83MmKTRP8583zcZvMNE8N9pGZr9m2_ctic429UEwmpvof0hrhug.bBXCol9-0Y3cd8LQBcW01jRrDORIYOXF6HAJOn6LUjY&dib_tag=se&keywords=accelerometer+arduino&sprefix=accelerometer+arduino%2Caps%2C110&sr=8-5)"> Link </a> |
 | HC05 Bluetooth Device | Sends the signal from the controller to the car as well as receives the signal from the car | $9.99 | <a href="https://www.amazon.com/DSD-TECH-HC-05-Pass-through-Communication/dp/B01G9KSAF6/ref=sr_1_3?crid=2J833J7AYQJA&keywords=hc05&sprefix=hc0%2Caps%2C112&sr=8-3"> Link </a> |
-| Solderless Bread | I used the 9V|:--:|:--:|
+| Solderless Bread | I used the 9V Battery clip to harness the power of the 9V batteries| $7.99 | <a href="https://www.amazon.com/ALAMSCN-Solderless-Breadboard-Battery-Arduino/dp/B08JYPMCZY/ref=sxts_b2b_sx_reorder_acb_business?crid=Z2S8NZU0KN1S&cv_ct_cx=breadboard%2Bpower%2Bsupply&dib=eyJ2IjoiMSJ9.nJ_euybTOUu9E6yyDpnEqg.NgztCYPGkG96eXyyFxpvxOVw5ykdTUq6oziUQnvf51E&dib_tag=se&keywords=breadboard%2Bpower%2Bsupply&s=electronics&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=breadboard%2Bpower%2Bs%2Celectronics%2C114&sr=1-1-9f062ed5-8905-4cb9-ad7c-6ce62808241a&th=1"> Link </a> |
+| 9V Batteries|I used this to power the car| $15.99 | <a href="https://www.amazon.com/Energizer-9V-Alkaline-Batteries-Count/dp/B00COWISBA/ref=asc_df_B00COWISBA/?hvpos=&hvpone=&hvptwo=&hvdvcmdl=&hvlocint=&psc=1&mcid=42efd40966933f1fa468967a05a2c9a3&hvocijid=14602693892681861315-B00COWISBA-&hvexpln=73"> Link </a> |
 
 # Resources that I used
 These are some of the resources I used to help me build my car:
@@ -246,4 +243,3 @@ These are some of the resources I used to help me build my car:
 - [Gesture Controlled Robot via Bluetooth]([https://sviatil0.github.io/Sviatoslav_BSE/](https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d))
 - [A document which helped me establish the Bluetooth connections]([https://arneshkumar.github.io/arneshbluestamp/](https://cdn.discordapp.com/attachments/1245042593717293137/1249801066216951919/Using_HC05_to_Communicate_to_HC05_1.docx?ex=66805a72&is=667f08f2&hm=fdc41341c4fdfdd7783f88b4ec2c15a814b22f760978444b4a3bb93779dd9a68&))
 
-To watch the BSE tutorial on how to create a portfolio, click here.
