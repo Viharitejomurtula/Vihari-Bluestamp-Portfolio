@@ -11,19 +11,20 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 ![Headstone Image](IMG_2211.JPG)
   
-# Third Milestone
+# First Milestone
 
-**The next step was to enhance the functionality of the car by adding a modification. I wanted to put a robotic arm on top of the car. Furthermore, I was going to make that gesture controlled as well using a similar working to that of the car and controller.**
+**The journey of building this gesture-controlled car started with the foundational task of pairing two Bluetooth modules, based on the Arduino UNO and Arduino Micro boards, allowing the controller and car to communicate.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4Xq_3TuRaPQ?si=Hy1Auj6PlfsMPTbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WXkEZ5nbTl8?si=fqcEhsrzOeRgtRXZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
--The first step towards this modification was to construct the robotic arm itself. This part was straightforward as it involved the same kind of wiring and coding as the set up of the car, and I had already mastered how to do that. This arm's design involved multiple servo motors which allowed the performance of accurate and precise movements.
+-The first step was to set up the wiring according to the wiring diagram. My confusion between wires of similar colors as well as my limited knowledge on the workings of the breadboard made this a challenging first step. Through a great attention to detail as well as trial and error, I was able to learn the breadboad layout and correct wiring patterns. This step helped me understand the electric connections on the breadboard worked
 
--The next step was to change the controls of the robotic arm, from the default joysticks to the accelerometer's input. This would allow the tilt of my hand to be transmitted to the robotic arm and be manifested as actual movements. I had to pair another two bluetooths that would make the Arduino Micro and the Nano board communicate. At first, I encountered a major obstacle: the Arduino Micro seemed to not be able to work with two Bluetooth devices at the same time. I began to doubt whether this modification was even possible. As I continued tirelessly working, I came upon a solution. Instead of configuring both the Bluetooth modules on the single Arduino Micro, I configured the new board on the Nano. This allowed me to communicate with both the robotic arm and the car with only one controller; furthermore, this only involved 1 new Bluetooth module instead of 2 like I first thought it would.
+-The second step was to upload the code to the modules, so they would actually do what I wanted them to do. After some dilligent study of the Arduino language references, I was able to bridge the gap between my limited understanding of this C based language and the guiding template I found. This step helped me understand the connection between the logic of the code and the physical indications I was expecting to see in the hardware.
 
--This was where I am at this point, but I hope to be able to alter the code uploaded into the arm to change the input of the if conditions from a joystick movement to an accelerometer reading
+-The third step, my most challenging step, felt more like a leap than a step. It involved actually pairing the two Bluetooth modules. To do this I had to use a series of AT commands to configure one module into the master configuration and the other into the slave configuration. Through careful debugging, cross-checking my commands, and even resetting the firmware I was able to succeed in establishing a working Bluetooth connection.
 
+-In accomplishing this first milestone, I was able to gain valuale hands-on experience involving wiring, troubleshooting, and coding. This milestone set the stage for the further development of my gesture-controlled car.
 
 
 # Second Milestone
@@ -42,20 +43,23 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 -Finally, I connected an accelerometer to the Arduino Micro: the controller of the car. An accelerometer is a chip capable of detecting tilt and translating it into numerical values in the x or y direction. I programmed the Micro to read these numerical values and transmit them to the UNO via Bluetooth. These would then be manifested in the rotation of the motors of the car. This made it so that the car would move in accordance to the tilt of the controller.
 
 -Overcoming these challenges through intuitive thinking and creativity was vital to the development of my car. Eachh step provided a valuable lesson in hardware design, problem-solving, and working with complex electrical components. I now had a working gesture controlled car that was both innovative and efficient.
-# First Milestone
-
-**The journey of building this gesture-controlled car started with the foundational task of pairing two Bluetooth modules, based on the Arduino UNO and Arduino Micro boards, allowing the controller and car to communicate.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WXkEZ5nbTl8?si=fqcEhsrzOeRgtRXZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
--The first step was to set up the wiring according to the wiring diagram. My confusion between wires of similar colors as well as my limited knowledge on the workings of the breadboard made this a challenging first step. Through a great attention to detail as well as trial and error, I was able to learn the breadboad layout and correct wiring patterns. This step helped me understand the electric connections on the breadboard worked
 
--The second step was to upload the code to the modules, so they would actually do what I wanted them to do. After some dilligent study of the Arduino language references, I was able to bridge the gap between my limited understanding of this C based language and the guiding template I found. This step helped me understand the connection between the logic of the code and the physical indications I was expecting to see in the hardware.
+# Third Milestone
 
--The third step, my most challenging step, felt more like a leap than a step. It involved actually pairing the two Bluetooth modules. To do this I had to use a series of AT commands to configure one module into the master configuration and the other into the slave configuration. Through careful debugging, cross-checking my commands, and even resetting the firmware I was able to succeed in establishing a working Bluetooth connection.
+**The next step was to enhance the functionality of the car by adding a modification. I wanted to put a robotic arm on top of the car. Furthermore, I was going to make that gesture controlled as well using a similar working to that of the car and controller.**
 
--In accomplishing this first milestone, I was able to gain valuale hands-on experience involving wiring, troubleshooting, and coding. This milestone set the stage for the further development of my gesture-controlled car.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4Xq_3TuRaPQ?si=Hy1Auj6PlfsMPTbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+-The first step towards this modification was to construct the robotic arm itself. This part was straightforward as it involved the same kind of wiring and coding as the set up of the car, and I had already mastered how to do that. This arm's design involved multiple servo motors which allowed the performance of accurate and precise movements.
+
+-The next step was to change the controls of the robotic arm, from the default joysticks to the accelerometer's input. This would allow the tilt of my hand to be transmitted to the robotic arm and be manifested as actual movements. I had to pair another two bluetooths that would make the Arduino Micro and the Nano board communicate. At first, I encountered a major obstacle: the Arduino Micro seemed to not be able to work with two Bluetooth devices at the same time. I began to doubt whether this modification was even possible. As I continued tirelessly working, I came upon a solution. Instead of configuring both the Bluetooth modules on the single Arduino Micro, I configured the new board on the Nano. This allowed me to communicate with both the robotic arm and the car with only one controller; furthermore, this only involved 1 new Bluetooth module instead of 2 like I first thought it would.
+
+-This was where I am at this point, but I hope to be able to alter the code uploaded into the arm to change the input of the if conditions from a joystick movement to an accelerometer reading
+
+
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
