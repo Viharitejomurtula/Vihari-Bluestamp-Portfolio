@@ -18,7 +18,9 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4Xq_3TuRaPQ?si=Hy1Auj6PlfsMPTbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 -The first step towards this modification was to build the actual robotic arm itself. This was quite simple as I just followed a tutorial.
+
 -The next step was to change the controls of the robotic arm, from the joysticks to the accelerometer. So I had to pair another two bluetooths that would make the Arduino Micro and the Nano board communicate. This was an issue as this meant I had to connect two bluetooth devices to the Arduino Micro. Initially I didn't think this was possible as the bluetooth just wouldn't connect to the Serial Port which was used to send messages. I fixed this problem by configuring the bluetooth while connecting it to the Nano and then just transferring the wiring over
+
 -This was where I am at this point, but I hope to be able to alter the code uploaded into the arm to change the input of the if conditions from a joystick movement to an accelerometer reading
 
 
