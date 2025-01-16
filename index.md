@@ -42,17 +42,18 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 # First Milestone
 
-**Getting the Bluetooths on the car and the controller to be synched was a challenging task for me who has never dealt with this kind of a project before. But eventually, I got it to work and completed the first step of this project.**
+**The journey of building this gesture-controlled car started with the foundational task of pairing two Bluetooth modules, based on the Arduino UNO and Arduino Micro boards, allowing the controller and car to communicate.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WXkEZ5nbTl8?si=fqcEhsrzOeRgtRXZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
--The first step was to set up the wiring according to the wiring diagram. I kept messing this up because I kept confusing different wires and didn't understand how the breadboard worked, but eventually I got it wired properly.
+-The first step was to set up the wiring according to the wiring diagram. My confusion between wires of similar colors as well as my limited knowledge on the workings of the breadboard made this a challenging first step. Through a great attention to detail as well as trial and error, I was able to learn the breadboad layout and correct wiring patterns. This step helped me understand the electric connections on the breadboard worked
 
--The next step was to understand what the code was actually doing. This wasn't too difficult as I just looked up all the syntax in the Arduino language references
+-The second step was to upload the code to the modules, so they would actually do what I wanted them to do. After some dilligent study of the Arduino language references, I was able to bridge the gap between my limited understanding of this C based language and the guiding template I found. This step helped me understand the connection between the logic of the code and the physical indications I was expecting to see in the hardware.
 
--Finally, I had to configure the two bluetooths into a master and slave configuration. This took quite long as I kept messing up the AT commands which were involved with configuring the bluetooths, but I was successful after resetting the firmware and entering the commands again.
+-The third step, my most challenging step, felt more like a leap than a step. It involved actually pairing the two Bluetooth modules. To do this I had to use a series of AT commands to configure one module into the master configuration and the other into the slave configuration. Through careful debugging, cross-checking my commands, and even resetting the firmware I was able to succeed in establishing a working Bluetooth connection.
 
+-In accomplishing this first milestone, I was able to gain valuale hands-on experience involving wiring, troubleshooting, and coding. This milestone set the stage for the further development of my gesture-controlled car.
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
