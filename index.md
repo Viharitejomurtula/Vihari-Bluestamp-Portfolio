@@ -17,6 +17,7 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4Xq_3TuRaPQ?si=Hy1Auj6PlfsMPTbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
 -The first step towards this modification was to build the actual robotic arm itself. This was quite simple as I just followed a tutorial.
 
 -The next step was to change the controls of the robotic arm, from the joysticks to the accelerometer. So I had to pair another two bluetooths that would make the Arduino Micro and the Nano board communicate. This was an issue as this meant I had to connect two bluetooth devices to the Arduino Micro. Initially I didn't think this was possible as the bluetooth just wouldn't connect to the Serial Port which was used to send messages. I fixed this problem by configuring the bluetooth while connecting it to the Nano and then just transferring the wiring over
@@ -31,9 +32,12 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rMxV38q7EIY?si=lf3GS5kRRYRiGh00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
 -The first thing I did was understand the workings of the h-bridge, and used two of them to control the right two and left two wheels. This was an issue as I needed the left two tires to move in synch with each other as well as the right two tires to move in synch with each other.
+
 -By extending the connections of the h-bridge to a breadboard, I was able to synch up the right two and left two wheels. 
 -I faced an issue after doing this, there wasn't enough power to rotate all the motors. I fixed this by plugging a 9V battery into the Arduino UNO
+
 -Finally, I connected an accelerometer to the Arduino Micro, which is the controller of the car. An accelerometer is able to sense the tilt in itself and manifest that tilt as a number in the x or y direction. Then I programmed the Micro to be able to send over the readings on the accelerometer to the car. This made it so that the car would move in accordance to the tilt of the controller.
 
 # First Milestone
@@ -44,7 +48,9 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 
 -The first step was to set up the wiring according to the wiring diagram. I kept messing this up because I kept confusing different wires and didn't understand how the breadboard worked, but eventually I got it wired properly.
+
 -The next step was to understand what the code was actually doing. This wasn't too difficult as I just looked up all the syntax in the Arduino language references
+
 -Finally, I had to configure the two bluetooths into a master and slave configuration. This took quite long as I kept messing up the AT commands which were involved with configuring the bluetooths, but I was successful after resetting the firmware and entering the commands again.
 
 # Schematics 
