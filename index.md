@@ -5,7 +5,7 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Vihari T | Dougherty Valley High School | Computer Science | Incoming Senior
+| Vihari T | Dougherty Valley High School | Electrical Engineering | Incoming Senior
 
 
 
