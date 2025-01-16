@@ -26,7 +26,7 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 -In accomplishing this first milestone, I was able to gain valuale hands-on experience involving wiring, troubleshooting, and coding. This milestone set the stage for the further development of my gesture-controlled car.
 
-#Wiring for Bluetooth Modules
+# Wiring for Bluetooth Modules
 Arduino Uno Wiring:
 ![Headstone Image](IMG_6051.jpg)
 
