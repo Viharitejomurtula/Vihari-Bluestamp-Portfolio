@@ -28,18 +28,20 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 # Second Milestone
 
-**After getting the controller working, I had to get the actual tires of the car rotating how I wanted them to.**
+**After pairing the two Bluetooth modules, the next step was to engineer the car's tires so that they rotated in the desired direction in response to specific commands. This began with understanding the workings of the motor control, the power supply, and synchronization of the tires.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rMxV38q7EIY?si=lf3GS5kRRYRiGh00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
--The first thing I did was understand the workings of the h-bridge, and used two of them to control the right two and left two wheels. This was an issue as I needed the left two tires to move in synch with each other as well as the right two tires to move in synch with each other.
+-The first step was to understand the workings of the h-bridge, a circuit that controls the direction and speed of a DC motor. The car's four wheels were controlled by two h-bridges, one for the right 2 wheels and another for the left 2 wheels. Initially, I faced issues trying to synchronize the left two wheels and the right two wheels, which needed to rotate in unision for smooth and coordinated movement.
 
--By extending the connections of the h-bridge to a breadboard, I was able to synch up the right two and left two wheels. 
--I faced an issue after doing this, there wasn't enough power to rotate all the motors. I fixed this by plugging a 9V battery into the Arduino UNO
+-To acheive synchronization, I extended the connections of the h-bridge to a larger breadboard. I then wired the wires in a way that the right two wheels would receive the same commands and the left two wheels would receive the same commands. This ensured synchronized and coordinated movement. For example when the car was turning left, the right side wheels needed to rotate forward while the left side wheels needed to rotate backwards. This was an issue that I was able to solve through adjusting the coding through trial and error. 
 
--Finally, I connected an accelerometer to the Arduino Micro, which is the controller of the car. An accelerometer is able to sense the tilt in itself and manifest that tilt as a number in the x or y direction. Then I programmed the Micro to be able to send over the readings on the accelerometer to the car. This made it so that the car would move in accordance to the tilt of the controller.
+-After one problem I was faced with another: the motors were barely strong enough to rotate under the full weight of the hardware. The easy, conventional solution to this would have been to order new working motors. Instead, I decided that I would make do with whatever I had. I redid the wiring using a smaller breadboard and balanced the weight of the wires evenly across the car. This worked very well and the motors rotated at full speed.
 
+-Finally, I connected an accelerometer to the Arduino Micro: the controller of the car. An accelerometer is a chip capable of detecting tilt and translating it into numerical values in the x or y direction. I programmed the Micro to read these numerical values and transmit them to the UNO via Bluetooth. These would then be manifested in the rotation of the motors of the car. This made it so that the car would move in accordance to the tilt of the controller.
+
+-Overcoming these challenges through intuitive thinking and creativity was vital to the development of my car. Eachh step provided a valuable lesson in hardware design, problem-solving, and working with complex electrical components. I now had a working gesture controlled car that was both innovative and efficient.
 # First Milestone
 
 **The journey of building this gesture-controlled car started with the foundational task of pairing two Bluetooth modules, based on the Arduino UNO and Arduino Micro boards, allowing the controller and car to communicate.**
