@@ -9,7 +9,7 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 
 
-![Headstone Image](logo.svg)
+![Headstone Image](IMG_2211.JPG)
   
 # Final Milestone
 
