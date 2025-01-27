@@ -15,7 +15,7 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 **The journey of building this gesture-controlled car started with the foundational task of pairing two Bluetooth modules, based on the Arduino UNO and Arduino Micro boards, allowing the controller and car to communicate.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WXkEZ5nbTl8?si=fqcEhsrzOeRgtRXZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/il1ZObM5pz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 -The first step was to set up the wiring according to the wiring diagram. My confusion between wires of similar colors as well as my limited knowledge on the workings of the breadboard made this a challenging first step. Through a great attention to detail as well as trial and error, I was able to learn the breadboad layout and correct wiring patterns. This step helped me understand the electric connections on the breadboard worked
