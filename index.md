@@ -263,6 +263,6 @@ void doMovement()
 # Resources that I used
 These are some of the resources I used to help me build my car:
 - [Gesture Controlled Robotic Arm by Joel A.](https://jabraham777.github.io/Gesture_Controlled_Robotic_Car/)
-- [Gesture Controlled Robot via Bluetooth](https://sviatil0.github.io/Sviatoslav_BSE/](https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d))
+- [Gesture Controlled Robot via Bluetooth](https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d)
 - [A document which helped me establish the Bluetooth connections](https://docs.google.com/document/d/1kMBRRsgoc-byQzOzSLsk8pSVuucN0gmi/edit?usp=sharing&ouid=112686482319576913944&rtpof=true&sd=true)
 
