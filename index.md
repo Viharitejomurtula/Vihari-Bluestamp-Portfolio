@@ -38,7 +38,7 @@ Arduino Micro Wiring:
 
 **After pairing the two Bluetooth modules, the next step was to engineer the car's tires so that they rotated in the desired direction in response to specific commands. This began with understanding the workings of the motor control, the power supply, and synchronization of the tires.**
 
-<iframe width="560" height="315" src="https://youtu.be/GcUOALzKLXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GcUOALzKLXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 -The first step was to understand the workings of the h-bridge, a circuit that controls the direction and speed of a DC motor. The car's four wheels were controlled by two h-bridges, one for the right 2 wheels and another for the left 2 wheels. Initially, I faced issues trying to synchronize the left two wheels and the right two wheels, which needed to rotate in unision for smooth and coordinated movement.
