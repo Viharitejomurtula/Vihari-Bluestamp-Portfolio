@@ -5,7 +5,7 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Vihari T | Dougherty Valley High School | Electrical Engineering | Incoming Senior
+| Vihari T | Dougherty Valley High School | Electrical Engineering | Senior
 
 
 
@@ -18,11 +18,13 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 <iframe width="560" height="315" src="https://www.youtube.com/embed/il1ZObM5pz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
--The first step was to set up the wiring according to the wiring diagram. My confusion between wires of similar colors as well as my limited knowledge on the workings of the breadboard made this a challenging first step. Through a great attention to detail as well as trial and error, I was able to learn the breadboad layout and correct wiring patterns. This step helped me understand the electric connections on the breadboard worked
+-The first step was to set up the wiring according to the wiring diagram. My confusion between wires of similar colors as well as my limited knowledge on the workings of the breadboard made this a challenging first step. Through a great attention to detail as well as trial and error, I was able to learn the breadboad layout and correct wiring patterns. This step helped me understand the electric connections on the breadboard worked.
 
 -The second step was to upload the code to the modules, so they would actually do what I wanted them to do. After some dilligent study of the Arduino language references, I was able to bridge the gap between my limited understanding of this C based language and the guiding template I found. This step helped me understand the connection between the logic of the code and the physical indications I was expecting to see in the hardware.
 
 -The third step, my most challenging step, felt more like a leap than a step. It involved actually pairing the two Bluetooth modules. To do this I had to use a series of AT commands to configure one module into the master configuration and the other into the slave configuration. Through careful debugging, cross-checking my commands, and even resetting the firmware I was able to succeed in establishing a working Bluetooth connection.
+
+-The fourth step was wiring an accelerometer onto the Arduino Micro so the tilt of the controller could be sensed and transmitted to the Arduino UNO. Using a number of if-statements, I was able to map the tilt readings from the accelerometer to specific directional commands: Forward, Backwards, Right, Left, and Stop. These were saved as single letters and were then sent to the Arduino UNO.
 
 -In accomplishing this first milestone, I was able to gain valuale hands-on experience involving wiring, troubleshooting, and coding. This milestone set the stage for the further development of my gesture-controlled car.
 
@@ -45,9 +47,9 @@ Arduino Micro Wiring:
 
 -To acheive synchronization, I extended the connections of the h-bridge to a larger breadboard. I then wired the wires in a way that the right two wheels would receive the same commands and the left two wheels would receive the same commands. This ensured synchronized and coordinated movement. For example when the car was turning left, the right side wheels needed to rotate forward while the left side wheels needed to rotate backwards. This was an issue that I was able to solve through adjusting the coding through trial and error. 
 
--After one problem I was faced with another: the motors were barely strong enough to rotate under the full weight of the hardware. The easy, conventional solution to this would have been to order new working motors. Instead, I decided that I would make do with whatever I had. I redid the wiring using a smaller breadboard and balanced the weight of the wires evenly across the car. This worked very well and the motors rotated at full speed.
+-After one problem I was faced with another: not all 4 motors were rotating for some of the commands. My first hypothesis was that the motors were faulty. This proved wrong when the issue persisted even after I replaced the motors. My second hypothesis was that the H-bridge might be inefficient at relaying the power from the Arduino UNO to the motors, but replacing the H-bridge didn't resolve the problem. My third hypothesis was that the battery I was using wasn't able to power the Arduino UNO, the H-bridge, the motors, and the bluetooth module all at once. I tried replacing it with a different 9V battery, even a different brand one, yet they did not resolve the issue. Finally, I connected a case of 4 AA batteries to a breadboard and connected the H-bridge and Arduino Uno to the breadboard instead of to each other. This solution worked, and the motors responded to all the commands as I intended them to.
 
--Finally, I connected an accelerometer to the Arduino Micro: the controller of the car. An accelerometer is a chip capable of detecting tilt and translating it into numerical values in the x or y direction. I programmed the Micro to read these numerical values and transmit them to the UNO via Bluetooth. These would then be manifested in the rotation of the motors of the car. This made it so that the car would move in accordance to the tilt of the controller.
+-Finally, I used a series of if-statements to program the Arduino UNO to interpret the single-letter commands (f, b, r, l, and s) transmitted by the Arduino Micro. It would then rotate the motors according to these commands.
 
 -Overcoming these challenges through intuitive thinking and creativity was vital to the development of my car. Eachh step provided a valuable lesson in hardware design, problem-solving, and working with complex electrical components. I now had a working gesture controlled car that was both innovative and efficient.
 
