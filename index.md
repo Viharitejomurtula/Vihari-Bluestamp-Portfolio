@@ -59,7 +59,6 @@ Arduino Micro Wiring:
 
 **Next, I wanted to construct a robotic arm on top of this car. I was going to make that gesture controlled as well using a similar working to that of the car and controller.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4Xq_3TuRaPQ?si=Hy1Auj6PlfsMPTbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 -The first step towards this modification was to construct the robotic arm itself. This part was straightforward as it involved the same kind of wiring and coding as the set up of the car——something I had already mastered. This arm's design involved multiple servo motors which allowed the performance of accurate and precise movements.
