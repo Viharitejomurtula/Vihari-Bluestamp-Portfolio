@@ -9,7 +9,7 @@ My project is a Gesture Controlled Car. This is essentially a remote control car
 
 
 
-![Headstone Image](IMG_2211.JPG)
+![Headstone Image](IMG_6273.JPG)
   
 # First Milestone
 
@@ -55,18 +55,16 @@ Arduino Micro Wiring:
 
 
 
-# Third Milestone
+# Future Aspirations
 
-**The next step was to enhance the functionality of the car by adding a modification. I wanted to put a robotic arm on top of the car. Furthermore, I was going to make that gesture controlled as well using a similar working to that of the car and controller.**
+**Next, I wanted to construct a robotic arm on top of this car. I was going to make that gesture controlled as well using a similar working to that of the car and controller.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4Xq_3TuRaPQ?si=Hy1Auj6PlfsMPTbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
--The first step towards this modification was to construct the robotic arm itself. This part was straightforward as it involved the same kind of wiring and coding as the set up of the car, and I had already mastered how to do that. This arm's design involved multiple servo motors which allowed the performance of accurate and precise movements.
+-The first step towards this modification was to construct the robotic arm itself. This part was straightforward as it involved the same kind of wiring and coding as the set up of the car——something I had already mastered. This arm's design involved multiple servo motors which allowed the performance of accurate and precise movements.
 
--The next step was to change the controls of the robotic arm, from the default joysticks to the accelerometer's input. This would allow the tilt of my hand to be transmitted to the robotic arm and be manifested as actual movements. I had to pair another two bluetooths that would make the Arduino Micro and the Nano board communicate. At first, I encountered a major obstacle: the Arduino Micro seemed to not be able to work with two Bluetooth devices at the same time. I began to doubt whether this modification was even possible. As I continued tirelessly working, I came upon a solution. Instead of configuring both the Bluetooth modules on the single Arduino Micro, I configured the new board on the Nano. This allowed me to communicate with both the robotic arm and the car with only one controller; furthermore, this only involved 1 new Bluetooth module instead of 2 like I first thought it would.
-
--This was where I am at this point, but I hope to be able to alter the code uploaded into the arm to change the input of the if conditions from a joystick movement to an accelerometer reading
+-The main difficulty I faced after this was switching the microcontroller board of the robotic arm from the Arduino Nano to the Arduino UNO. My plan was to replace the left command for the car with a command that moved the robotic arm; to turn left, I would just rotate the car 270 degrees to the right. This way, when I tilted my controller left, the robotic arm would perform the desired action. However, mapping the equivalent connections on the Arduino UNO proved very difficult. Despite this, I continue to refine my skills and am steadfastly determined to complete this modification.
 
 
 # Schematics 
